@@ -1,21 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
-import Brazil from '../views/Brazil.vue';
-import Hawaii from '../views/Hawaii.vue';
-import Jamaica from '../views/Jamaica.vue';
-import Panama from '../views/Panama.vue';
+
+const Home = () => import('../views/Home.vue');
+const Brazil = () => import('../views/Brazil.vue');
+const Hawaii = () => import('../views/Hawaii.vue');
+const Jamaica = () => import('../views/Jamaica.vue');
+const Panama = () => import('../views/Panama.vue');
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About,
   },
   {
     path: '/brazil',
